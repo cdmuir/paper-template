@@ -1,0 +1,116 @@
+---
+output:
+  bookdown::pdf_document2:
+    includes:
+      before_body: ../template/doc_prefix.tex
+      in_header: ../template/preamble.tex
+    keep_tex: yes
+    latex_engine: pdflatex
+    number_sections: no
+    toc: no
+  bookdown::html_document2:
+    number_sections: no
+    theme: readable
+    toc: yes
+  bookdown::tufte_html2:
+    number_sections: no
+    toc: yes
+  bookdown::word_document2: null
+fontsize: 10pt
+linestretch: 1.5
+link-citations: yes
+bst: ../template/mewphyt.bst
+bibliography: paper-template.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\begin{flushleft}
+{\Large
+\textbf\newline{World record progression in track}
+}
+\newline
+\\
+Christopher D. Muir\textsuperscript{1,*},
+Author 2\textsuperscript{2},
+Author 3\textsuperscript{1},
+Author 4\textsuperscript{1},
+Author 5\textsuperscript{2},
+Author 6\textsuperscript{2},
+Author 7\textsuperscript{1}
+\\
+\bigskip
+\bf{1} School of Life Sciences, University of Hawai\`{}i at M\=anoa, Honolulu, HI, USA
+\\
+\bf{2} Affiliation B
+\\
+\bigskip
+* cdmuir@hawaii.edu
+
+\end{flushleft}
+
+# Abstract
+
+ 1. the research conducted, including the rationale
+ 2. methods
+ 3. key results
+ 4. the main conclusion, including the key points of discussion
+
+\linenumbers
+
+# Introduction
+
+How fast can people run compared to other animals [@denny_limits_2008]?
+
+# Methods
+
+## Subsection 1
+
+I looked at how athletic world records changed through time.
+
+## Subsection 2
+
+The second [Methods] subsection.
+
+# Results
+
+\marginpar{
+\vspace{.7cm} % adjust vertical position relative to text with \vspace{} - note that you can enter negative numbers to move margin caption up
+\color{Gray} % this gives caption a grey color to set it apart from text body
+\textbf{Figure \ref{m100_1}. Example of a margin caption.} % note that \ref{fig1} refers to the corresponding wrapfigure
+Setting up your figure + caption like this looks fancy and does not disrupt the flow of the text. But it requires more manual adjustments (position, spacing, labeling) compared to using standard \LaTeX figure environments.
+}
+\begin{wrapfigure}[12]{l}{75mm}
+% the number in [] of wrapfigure is optional and gives the number of text lines that should be wrapped around the text. Adjust according to your figures height
+\includegraphics[width=75mm]{../figures/m100-progression.pdf}
+\captionsetup{labelformat=empty} % makes sure dummy caption is blank
+% add dummy caption - otherwise \label won't work and figure numbering will not count up
+ \caption{}
+\label{m100_1}
+\end{wrapfigure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum finibus diam, gravida sagittis lorem gravida vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla in diam tristique ante posuere tristique. Donec interdum purus sit amet nisl accumsan consectetur. Fusce aliquet libero mi, quis ornare dolor congue ullamcorper. Nulla nulla urna, molestie in urna sed, lacinia volutpat eros. Ut mi libero, elementum scelerisque ipsum vel, hendrerit fermentum turpis. Aliquam sit amet leo sodales, egestas augue id, fermentum nulla. Aenean vel cursus ante, et pellentesque eros. Nulla ac neque nec justo posuere commodo sit amet sit amet justo. Aliquam tincidunt tempor ex nec tincidunt. In ullamcorper vehicula lobortis. 
+
+## Subsection 1
+
+The first [Results] subsection.
+
+## Subsection 2
+
+The second [Results] subsection. See Figure \ref{m100_2}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum finibus diam, gravida sagittis lorem gravida vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla in diam tristique ante posuere tristique. Donec interdum purus sit amet nisl accumsan consectetur. Fusce aliquet libero mi, quis ornare dolor congue ullamcorper. Nulla nulla urna, molestie in urna sed, lacinia volutpat eros. Ut mi libero, elementum scelerisque ipsum vel, hendrerit fermentum turpis. Aliquam sit amet leo sodales, egestas augue id, fermentum nulla. Aenean vel cursus ante, et pellentesque eros. Nulla ac neque nec justo posuere commodo sit amet sit amet justo. Aliquam tincidunt tempor ex nec tincidunt. In ullamcorper vehicula lobortis. 
+
+\begin{figure}[ht]
+\includegraphics[width=\textwidth]{../figures/m100-progression.pdf}
+\caption{\color{Gray} \textbf{Example of a standard floating figure}. \textbf{A-F}, This figure is wrapped into the standard floating environment.}
+\label{m100_2}
+\end{figure}
+
+# Discussion
+
+People are getting faster!
+
+# References
