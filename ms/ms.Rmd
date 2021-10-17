@@ -5,7 +5,7 @@ output:
       before_body: ../template/doc_prefix.tex
       in_header: ../template/preamble.tex
     keep_tex: yes
-    latex_engine: pdflatex
+    latex_engine: xelatex
     number_sections: no
     toc: no
   bookdown::html_document2:
@@ -16,10 +16,10 @@ output:
     number_sections: no
     toc: yes
   bookdown::word_document2: null
-fontsize: 10pt
+fontsize: 12pt
 linestretch: 1.5
 link-citations: yes
-bst: ../template/mewphyt.bst
+bst: ../template/newphyt.bst
 bibliography: paper-template.bib
 ---
 
